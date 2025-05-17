@@ -27,7 +27,7 @@ validate() {
     echo "nginx already installed"
     validate $? "nginx"
  fi
- 
+ dnf list installed mysql
 if [ $? -ne 0 ]
  then echo "mysql not installed"
     validate $? "mysql"
@@ -36,6 +36,7 @@ if [ $? -ne 0 ]
     echo "mysql already installed"
     validate $? "mysql"
  fi
+dnf list installed python3 
  if [ $? -ne 0 ]
  then echo "python3 not installed"
     validate $? "pyhton3"
