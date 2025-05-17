@@ -9,7 +9,6 @@ else
 echo "Running as root user"
 fi
 exit 0
-fi
 
 vaidate() {
     if [ $1 -eq 0 ]
