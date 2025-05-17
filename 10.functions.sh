@@ -29,3 +29,4 @@ validate() {
  dnf list installed mysql
     validate $? "my sql"
     sudo dnf install mysql -y
+fi
