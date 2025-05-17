@@ -18,7 +18,7 @@ vaidate() {
     echo " $2 not need to install"
     fi
 }
-if 
+
  dnf list installed nginx
  validate $? "nginx"
  sudo dnf install nginx -y
