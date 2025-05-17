@@ -4,7 +4,8 @@
 if [ $UID -ne 0 ]
 
 then
-echo "Please run this script with sudo or as root"
+echo "Runnig as root user"
+sudo dnf install nginx -y
 exit 1
  else
 
