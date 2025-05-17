@@ -1,13 +1,14 @@
 #!/bin/bash
 USERID=$(id -u)
 
-if [ $USERID -eq 0 ]
+if [ $USERID -ne 0 ]
 then
-echo "Running as root user"
-exit 0
-else
 echo "Please run as root user"
 exit 1
+else
+echo "Running as root user"
+fi
+exit 0
 fi
 
 vaidate() {
@@ -18,6 +19,7 @@ vaidate() {
     echo " $2 not need to install"
     fi
 }
+if 
  dnf list installed nginx
  validate $? "nginx"
  sudo dnf install nginx -y
