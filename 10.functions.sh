@@ -7,8 +7,7 @@ echo "Please run as root user"
 exit 1
 else
 echo "Running as root user"
-fi
-exit 0
+
 
 validate() {
     if [ $1 -eq 0 ]
