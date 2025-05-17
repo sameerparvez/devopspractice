@@ -10,7 +10,7 @@ echo "Running as root user"
 fi
 exit 0
 
-vaidate() {
+validate() {
     if [ $1 -eq 0 ]
     then
     echo "installing $2"
