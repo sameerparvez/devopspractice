@@ -19,14 +19,29 @@ validate() {
 }
 
  dnf list installed nginx
- validate $? "nginx"
- sudo dnf install nginx -y
-
- dnf list installed python3
- validate $? "python3"
- sudo install puthon3 -y
-
- dnf list installed mysql
-    validate $? "my sql"
+ if [ $? -ne 0 ]
+ then echo "nginx not installed"
+    validate $? "nginx"
+    sudo dnf install nginx -y
+ else
+    echo "nginx already installed"
+    validate $? "nginx"
+ fi
+ 
+if [ $? -ne 0 ]
+ then echo "mysql not installed"
+    validate $? "mysql"
     sudo dnf install mysql -y
+ else
+    echo "mysql already installed"
+    validate $? "mysql"
+ fi
+ if [ $? -ne 0 ]
+ then echo "python3 not installed"
+    validate $? "pyhton3"
+    sudo dnf install python3 -y
+ else
+    echo "python3 already installed"
+    validate $? "python3"
+ fi
 fi
