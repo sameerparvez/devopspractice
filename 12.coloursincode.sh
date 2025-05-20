@@ -1,11 +1,11 @@
 #!/bin/bash
 
 Softwares=("nginx" "mysql" "python3")
- R = "\e[31m"
- G = "\e[32m"
+ R="\e[31m"
+ G="\e[32m"
  
  validateuser() {
-    if [id -u -eq 0]
+    if [ "$(id -u )"-eq 0 ]
     then 
  echo -e "$G using root user"
 
@@ -15,7 +15,7 @@ fi
     }
 
  validatesoftware() {
- if [$1 -eq 1]
+ if [ $1 -eq 1 ]
  then
  echo -e "$G installing $2"
     else
