@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Softwares = ("nginx" "mysql" "python3")
+Softwares=("nginx" "mysql" "python3")
  R = "\e[31m"
  G = "\e[32m"
  
